@@ -44,8 +44,13 @@ export const cookieFetch = async (url, options = {}) => {
   const defaultOptions = {
     // TODO: 실습내용
     // 1. 쿠키 전송을 위한 설정
+    credentials: "include",
     // 2. 서버 컴포넌트에서도 매번 재검증을 cache 옵션
+    cache: "no-store",
     // 3. Content-Type 헤더 설정
+    headers: {
+      "Content-Type": "application/json",
+    },
   };
 
   const mergedOptions = {
